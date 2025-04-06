@@ -1,0 +1,30 @@
+package com.springcore.lifecycle;
+
+import org.springframework.beans.factory.InitializingBean;
+
+public class Television implements InitializingBean{
+	private String display;
+
+	public String getDisplay() {
+		return display;
+	}
+
+	public void setDisplay(String display) {
+		this.display = display;
+	}
+
+	public Television() {
+	}
+
+	@Override
+	public String toString() {
+		return "Television [display=" + display + "]";
+	}
+
+	public void afterPropertiesSet() throws Exception {
+		// TODO Auto-generated method stub
+		
+	}
+	
+	
+}

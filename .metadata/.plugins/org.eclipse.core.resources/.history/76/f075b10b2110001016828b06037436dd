@@ -1,0 +1,15 @@
+package com.springcore.lifecycle;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.AbstractApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+public class RunTelevision {
+	public static void main(String[] args) {
+		AbstractApplicationContext context = new ClassPathXmlApplicationContext("television.xml");
+
+		Television tv = (Television) context.getBean("t1");
+
+		System.out.println(tv);
+	}
+}

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="
+           http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans.xsd
+           http://www.springframework.org/schema/context
+           http://www.springframework.org/schema/context/spring-context.xsd">
+           
+	<bean name="client1" class="com.springcore.FirstsMavenProject.constructorInjection.Client">
+			<constructor-arg value="Romeo" />
+			<constructor-arg value="734884983" />		
+	</bean>
+	<bean name="client2" class="com.springcore.FirstsMavenProject.constructorInjection.Client">
+			<constructor-arg value="Goku" />
+			<constructor-arg value="245654983" />		
+	</bean>
+		
+	<bean name="emp"
+		class="com.springcore.FirstsMavenProject.constructorInjection.Emp">
+		<constructor-arg name="eid" value="101" />
+		<constructor-arg name="ename" value="Rahul" />
+		<constructor-arg name="clients">
+		<list>
+			<ref bean="client1"/>
+			<ref bean="client2"/>
+		</list>
+		</constructor-arg>
+	</bean>
+
+	<!-- <bean id="emp1"
+		class="com.springcore.FirstsMavenProject.constructorInjection.Emp">
+		<constructor-arg name="eid" value="102" />
+		<constructor-arg name="ename" value="Ashleyaa" />
+	</bean> -->
+	
+	
+</beans>

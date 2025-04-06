@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="
+           http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans.xsd
+           http://www.springframework.org/schema/context
+           http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<bean id="sub1"
+		class="com.springcore.FirstsMavenProject.listOfObj.Subject">
+		<property name="subName" value="Java" />
+		<property name="price" value="3000" />
+	</bean>
+	<bean id="sub2"
+		class="com.springcore.FirstsMavenProject.listOfObj.Subject">
+		<property name="subName" value="SQL" />
+		<property name="price" value="2000" />
+	</bean>
+	<bean id="sub3"
+		class="com.springcore.FirstsMavenProject.listOfObj.Subject">
+		<property name="subName" value="Spring" />
+		<property name="price" value="4000" />
+	</bean>
+	<bean id="stud" class="com.springcore.FirstsMavenProject.listOfObj.Student">
+		<property name="studName" value="Rahul"/>
+		<property name="subjects">
+		<list>
+			<ref bean="sub1"/>
+			<ref bean="sub2"/>
+			<ref bean="sub3"/>
+		</list>
+		</property>	
+	</bean>
+</beans>

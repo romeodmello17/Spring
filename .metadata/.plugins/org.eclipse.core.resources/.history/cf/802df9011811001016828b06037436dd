@@ -1,0 +1,31 @@
+package com.springcore.lifecycle;
+
+public class NotePad {
+	private String display;
+
+	public String getDisplay() {
+		return display;
+	}
+
+	public void setDisplay(String display) {
+		this.display = display;
+	}
+
+	public NotePad() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	@Override
+	public String toString() {
+		return "NotePad [display=" + display + "]";
+	}
+
+	public void start() {
+		System.out.println("NotePad is Starting....");
+	}
+
+	public void end() {
+		System.out.println("NotePad is Shutting....");
+	}
+}

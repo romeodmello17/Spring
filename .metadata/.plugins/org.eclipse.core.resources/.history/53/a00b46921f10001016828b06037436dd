@@ -1,0 +1,23 @@
+package com.springcore.lifecycle;
+
+public class Television {
+	private String display;
+
+	public String getDisplay() {
+		return display;
+	}
+
+	public void setDisplay(String display) {
+		this.display = display;
+	}
+
+	public Television() {
+	}
+
+	@Override
+	public String toString() {
+		return "Television [display=" + display + "]";
+	}
+	
+	
+}
